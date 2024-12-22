@@ -109,6 +109,26 @@ def add_links():
     #     conn.commit()
     #     answer = input("Додати зв'язок (y / n)?")
     close()
+
+def check_answer(q_id, ans_text):
+    query = '''
+            SELECT question.answer 
+            FROM quiz_content, question 
+            WHERE quiz_content.id = ? 
+            AND quiz_content.question_id = question.id
+        '''
+    open()
+    cursor.execute(query, str(q_id))
+    result = cursor.fetchone()
+    close()
+    if result is None:
+        return False 
+    else:
+        if result[0] == ans_text:
+            
+            return True 
+        else:
+            return False 
     
 def get_all_questions_for_quiz(quiz_id):
     """
