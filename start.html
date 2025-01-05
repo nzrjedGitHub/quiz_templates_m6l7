@@ -2,11 +2,11 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_quiz.css') }}">
     <title>Вікторина</title>
 </head>
 <body>
-<h2>Виберіть вікторину:</h2>
+<h2 class="title">Виберіть вікторину:</h2>
     <form method="post" action="/">
         <select name="quiz">
             {% for id, name in q_list %}

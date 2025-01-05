@@ -19,7 +19,7 @@ def save_answers():
     answer = request.form.get('ans_text')
     quest_id = request.form.get('q_id')
     session['last_question'] = quest_id
-    session['total'] 
+    session['total'] += 1
     if check_answer(quest_id, answer):
         session['answers'] += 1
 

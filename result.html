@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_quiz.css') }}">
 </head>
 <body>
-<h1>Ваш результат:</h1>
+<h1 class="title">Ваш результат:</h1>
 <div class="outer-div"><h3>{{ right }} правильных відповідей з {{ total }}</h3></div>
 <a href="{{url_for('index')}}" class="button"> повернутись на початок </a>
 </body>

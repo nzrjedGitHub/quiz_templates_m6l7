@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Вікторина</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_quiz.css') }}">
 </head>
 <body>
   {% if question %}
-    <h1>{{question}}</h1>
+    <h1 class="title">{{question}}</h1>
   {% endif %}
   <form method="post" action="test">
     <input type="hidden" name="q_id" value="{{quest_id}}">
